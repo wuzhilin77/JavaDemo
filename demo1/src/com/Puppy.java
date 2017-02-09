@@ -6,6 +6,7 @@ public class Puppy{
    }
    public static void main(String []args){
       // 下面的语句将创建一个Puppy对象
-      Puppy Mypuppy = new Puppy( "tommy" );
+      @SuppressWarnings("unused")
+	Puppy Mypuppy = new Puppy( "tommy" );
    }
 }
