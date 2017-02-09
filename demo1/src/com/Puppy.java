@@ -16,5 +16,6 @@ public class Puppy{
 	myPuppy.setAge(2); 
 	myPuppy.getAge();
 	System.out.println("±‰¡ø÷µ £ª" + myPuppy.puppyAge);
+	
 	}
 }
