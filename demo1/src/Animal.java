@@ -1,19 +1,18 @@
-class Animal {
+
+abstract class Animal {
 	String type;
 	String name;
 	int age;
 	int weight;
 
 	void eat() {
-		System.out.println("animal eat");
+		System.out.println("动物爱吃饭");
 	}
 
-	void breath() {
-		System.out.println("animal breath");
-	}
+	abstract void breath();
 
 	void sleep() {
-		System.out.println("animal sleep");
+		System.out.println("动物在睡觉");
 	}
 
 }
@@ -42,18 +41,4 @@ class Fish extends Animal {
 	void breath() {
 		System.out.println("鱼是用腮呼吸的");
 	}
-}
-
-public class DuoTaiDemo {
-	public static void main(String[] args) {
-		Animal[] animal = new Animal[3];
-		animal[0] = new Animal();
-		animal[1] = new Tiger();
-		animal[2] = new Fish();
-		animal[0].breath();
-		animal[1].breath();
-		animal[2].breath();
-
-	}
-
 }
