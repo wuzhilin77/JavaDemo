@@ -23,7 +23,6 @@ class Outer {
 	class Iner2 {
 		void print() {
 			System.out.println("Iner2.print()");
-			System.out.println("Outer.out_string=" + out_string + "");
 			Outer outer = new Outer();
 			System.out.println("Outer.out_string=" + outer.out_string);
 		}
