@@ -17,26 +17,28 @@ class ThreadDemo extends Thread {
 	}
 
 	public void run() {
-		for (int i = 0; i < 5; i++) {
-			if (this.getName().equals("Thread1")) {
-				oShare.szData = "这是第1个线程";
-				try {
-					Thread.sleep((int) Math.random() * 100);
-				} catch (InterruptedException e) {
+		synchronized (oShare) {
+			for (int i = 0; i < 5; i++) {
+				if (this.getName().equals("Thread1")) {
+					oShare.szData = "这是第1个线程";
+					try {
+						Thread.sleep((int) Math.random() * 100);
+					} catch (InterruptedException e) {
+					}
+					System.out.println(this.getName() + ":" + oShare.szData);
+				} else if (this.getName().equals("Thread2")) {
+					oShare.szData = "这是第2个线程";
+					try {
+						Thread.sleep((int) Math.random() * 100);
+					} catch (InterruptedException e) {
+					}
+					System.out.println(this.getName() + ":" + oShare.szData);
 				}
-				System.out.println(this.getName() + ":" + oShare.szData);
-			} else if (this.getName().equals("Thread2")) {
-				oShare.szData = "这是第2个线程";
-				try {
-					Thread.sleep((int) Math.random() * 100);
-				} catch (InterruptedException e) {
-				}
-				System.out.println(this.getName() + ":" + oShare.szData);
 			}
+
 		}
 
 	}
-
 }
 
 public class ThreadNoSynchronized {
