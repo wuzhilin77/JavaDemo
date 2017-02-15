@@ -1,4 +1,4 @@
-package XianCheng;
+package YiChang;
 
 public class ThreadStart {
 	public static void main(String[] args) {
