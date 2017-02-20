@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<constant name="struts.devMode" value="false" />
+
+	<!-- package：用来统一管理action -->
+	<package name="mysshh" extends="struts-default" namespace="/">
+		<!-- 用户模块的Action -->
+		<action name="user_*" class="userAction" method="{1}">
+			<result name="loginSuccess">index.jsp</result>
+		</action>
+
+	</package>
+
+</struts>    
