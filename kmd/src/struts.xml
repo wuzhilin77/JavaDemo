@@ -3,7 +3,7 @@
 <struts>
 
 <package name="ssh" extends="struts-default" namespace="/">
-	<action name="product_*" class="productAction" method="{1}">
+	<action name="productSave" class="productAction" method="save">
 		<result name="index">index.jsp</result>
 	</action>
 </package>

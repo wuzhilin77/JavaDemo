@@ -18,14 +18,8 @@ public class Product implements java.io.Serializable {
 	public Product() {
 	}
 
-	/** minimal constructor */
-	public Product(Integer pid) {
-		this.pid = pid;
-	}
-
 	/** full constructor */
-	public Product(Integer pid, String pname, Double price) {
-		this.pid = pid;
+	public Product(String pname, Double price) {
 		this.pname = pname;
 		this.price = price;
 	}

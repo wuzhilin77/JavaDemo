@@ -57,8 +57,7 @@
 	
 	
 	<!-- 配置Action的类 -->
-	<bean id="productAction"
-		class="cn.muke.ssh.action.ProductAction" scope="prototype">
+	<bean id="productAction" class="cn.muke.ssh.action.ProductAction">
 		<property name="productService" ref="productService"/>
 	</bean>
 	<!-- 配置Service的类 -->
